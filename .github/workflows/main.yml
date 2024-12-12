@@ -16,5 +16,6 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '17'
+          distribution: 'temurin' # 指定 JDK 的分发版本
       - name: Build and Test with Maven
         run: mvn clean verify
