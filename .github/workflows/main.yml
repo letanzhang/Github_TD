@@ -16,6 +16,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '17'
-          distribution: 'temurin' # 指定 JDK 的分发版本
-      - name: Build and Test with Maven
+          distribution: 'temurin'
+      - name: Navigate to Project Directory and Build
+        working-directory: simpleapi # 这里指定工作目录为 simpleapi
         run: mvn clean verify
